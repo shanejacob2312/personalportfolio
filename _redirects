@@ -1,0 +1,6 @@
+# Netlify redirects file
+# Handle form submissions
+/*    /index.html   200
+
+# Handle form submissions for Netlify Forms
+/contact    /index.html   200 
