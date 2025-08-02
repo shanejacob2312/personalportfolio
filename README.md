@@ -33,7 +33,7 @@ A modern, interactive personal portfolio website showcasing skills, projects, an
 2. **About**: Personal story and statistics
 3. **Skills**: Interactive skill showcase organized by category
 4. **Projects**: Featured projects with hover effects
-5. **Contact**: Contact information and functional form
+5. **Contact**: Contact information cards (Email, LinkedIn, GitHub)
 
 ## Technology Stack
 
@@ -95,7 +95,7 @@ The website uses CSS custom properties for easy theming. Edit the `:root` variab
 - **Personal Information**: Update the hero section and about content in `index.html`
 - **Projects**: Add your projects to the projects section
 - **Skills**: Modify the skills grid to match your expertise
-- **Contact**: Update contact information and social links
+- **Contact**: Update contact information in the contact cards
 
 ### Animations
 - **GSAP Animations**: Modify animation parameters in `script.js`
@@ -206,73 +206,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with modern web technologies**
 
-## Contact Form Functionality
-
-The contact form is currently set up with multiple options for email delivery:
-
-### Current Setup (Simulated)
-- **Status**: Working with simulated email sending
-- **Features**: Form validation, error handling, success messages
-- **Behavior**: Shows success message and logs form data to console
-
-### Option 1: EmailJS Integration (Recommended)
-To enable real email sending:
-
-1. **Sign up** at [EmailJS](https://www.emailjs.com/)
-2. **Create** an email service (Gmail, Outlook, etc.)
-3. **Create** an email template
-4. **Update** the JavaScript with your credentials:
-
-```javascript
-// In script.js, update these values:
-emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-    from_name: name,
-    from_email: email,
-    message: message,
-    to_name: 'Shane Jacob'
-}, 'YOUR_USER_ID')
-```
-
-5. **Add** EmailJS script to HTML:
-```html
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-    emailjs.init('YOUR_USER_ID');
-</script>
-```
-
-### Option 2: Formspree Integration
-1. **Sign up** at [Formspree](https://formspree.io/)
-2. **Create** a new form
-3. **Update** the form action in HTML:
-```html
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
-
-### Option 3: Netlify Forms
-If deploying to Netlify:
-1. **Add** `netlify` attribute to form
-2. **Configure** form handling in Netlify dashboard
-
-### Form Features
-- **Real-time validation**
-- **Email format validation**
-- **Loading states**
-- **Success/Error messages**
-- **Form reset after submission**
-- **Accessibility features**
-
-### Testing the Form
-1. **Fill out** the contact form
-2. **Submit** and check browser console
-3. **Verify** validation messages appear
-4. **Confirm** success message shows
-
-The form is fully functional with simulated email sending and ready for real email integration!
-
 ## Netlify Deployment
 
-This portfolio is optimized for Netlify deployment with built-in form handling.
+This portfolio is optimized for Netlify deployment.
 
 ### Quick Deploy to Netlify
 
@@ -292,35 +228,12 @@ This portfolio is optimized for Netlify deployment with built-in form handling.
 2. **Environment Variables** (if needed):
    - Add any environment variables in Netlify dashboard
 
-### Contact Form Setup
+### Contact Section
 
-The contact form is already configured for Netlify Forms:
-
-#### Form Configuration
-- **Netlify Forms**: Enabled with `data-netlify="true"`
-- **Spam Protection**: Honeypot field included
-- **Form Validation**: Client-side validation
-- **Success Handling**: User feedback on submission
-
-#### Form Fields
-- **Name**: Required text input
-- **Email**: Required email input with validation
-- **Message**: Required textarea
-- **Bot Field**: Hidden honeypot for spam protection
-
-#### Netlify Dashboard Setup
-1. **Go to** your site's Netlify dashboard
-2. **Navigate to** "Forms" tab
-3. **Verify** the "contact" form is detected
-4. **Configure** notifications (optional):
-   - Email notifications
-   - Slack integration
-   - Webhook notifications
-
-#### Form Notifications
-- **Email**: Receive form submissions via email
-- **Slack**: Get notifications in Slack channel
-- **Webhooks**: Integrate with other services
+The contact section features direct contact information:
+- **Email**: Direct email contact
+- **LinkedIn**: Professional networking
+- **GitHub**: Code repository and projects
 
 ### Custom Domain Setup
 
@@ -345,26 +258,19 @@ The site includes:
 - **Compression**: Automatic gzip compression
 - **CDN**: Global content delivery network
 
-### Form Testing
+### Testing
 
 1. **Local Testing**:
    - Run `python -m http.server 8000`
-   - Test form submission
+   - Test all sections and animations
    - Check browser console for logs
 
 2. **Production Testing**:
    - Deploy to Netlify
-   - Submit test form
-   - Check Netlify Forms dashboard
-   - Verify email notifications
+   - Test all functionality
+   - Verify contact links work
 
 ### Troubleshooting
-
-#### Form Not Working
-- Check Netlify Forms dashboard
-- Verify form has `data-netlify="true"`
-- Ensure form name is "contact"
-- Check browser console for errors
 
 #### Build Issues
 - Verify all files are in root directory
@@ -393,4 +299,4 @@ Add in Netlify dashboard:
 - Set up build hooks for automatic deployments
 - Integrate with CI/CD pipelines
 
-Your portfolio is now ready for Netlify deployment with a fully functional contact form! 
+Your portfolio is now ready for Netlify deployment with a clean, professional contact section! 
