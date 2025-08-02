@@ -635,15 +635,17 @@ body {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    max-width: 600px;
+    width: 100%;
 }
 
 .contact-item {
